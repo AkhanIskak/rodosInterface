@@ -19,9 +19,9 @@ const Home = () => {
             if (response.data.response.choices && response.data.response.choices[0]) {
                 setResponseMessage(response.data.response.choices[0].message.content);
             }
-        } catch (error) {
+        } catch (error:any) {
             console.error('Error fetching data:', error);
-            setResponseMessage('There was an error with your request.');
+            setResponseMessage(error.message);
         } finally {
             setLoading(false);  // Set loading to false when request completes
         }
