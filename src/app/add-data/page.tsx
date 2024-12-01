@@ -26,7 +26,7 @@ const Page = () => {
             };
 
             // Send POST request to add data
-            const response = await axios.post('https://blizhe.kz/add_data', payload);
+            const response = await axios.post('https://blizhe.kz/back/add_data', payload);
 
             if (response.data.status === 'success') {
                 setResponseMessage('Data successfully added.');

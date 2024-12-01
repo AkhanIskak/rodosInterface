@@ -12,7 +12,7 @@ const Home = () => {
         setLoading(true);  // Set loading to true when request starts
         setResponseMessage('');  // Clear previous response
         try {
-            const response = await axios.post('https://blizhe.kz/get_data', {
+            const response = await axios.post('https://blizhe.kz/back/get_data', {
                 user_prompt: userPrompt,
             });
 
