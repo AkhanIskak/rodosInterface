@@ -21,7 +21,7 @@ const Home = () => {
             }
         } catch (error:any) {
             console.error('Error fetching data:', error);
-            setResponseMessage(error.message);
+            setResponseMessage('Sorry , I dont know ');
         } finally {
             setLoading(false);  // Set loading to false when request completes
         }
