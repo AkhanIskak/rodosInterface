@@ -16,8 +16,8 @@ const Home = () => {
                 user_prompt: userPrompt,
             });
 
-            if (response.data.response.choices && response.data.response.choices[0]) {
-                setResponseMessage(response.data.response.choices[0].message.content);
+            if (response.data.response ) {
+                setResponseMessage(response.data.response);
             }
         } catch (error:any) {
             console.error('Error fetching data:', error);
